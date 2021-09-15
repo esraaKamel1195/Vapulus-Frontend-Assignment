@@ -1,1 +1,15 @@
-<p>movie-details works!</p>
+<div class="container">
+  <div class="first-side">
+    <img src="{{movieDetail.poster}}" alt="{{movieDetail.poster}}">
+  </div>
+  <div class="second-side">
+    <div class="title">
+      <h1>{{movieDetail.title}} ({{movieDetail.imdb_rating}})</h1>
+    </div>
+    <h3><p>{{movieDetail.released_on}}</p> | <p>{{movieDetail.length}}</p> | <p>{{movieDetail.director}}</p></h3>
+    <h3>cast: {{movieDetail.cast}}</h3>
+    <div class="description">
+      <p>{{movieDetail.overview}}</p>
+    </div>
+  </div>
+</div>
