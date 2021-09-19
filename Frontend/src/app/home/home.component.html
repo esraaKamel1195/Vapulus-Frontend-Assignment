@@ -1,12 +1,17 @@
 <div class="container">
-  <div class="category" *ngFor="let Genre of allGenreList">
+  <div #gridList class="category" *ngFor="let Genre of allGenreList">
     <h4>{{Genre}}</h4>
-    <mat-grid-list cols="4" rowHeight="100px">
-      <div *ngFor="let movie of movieList" routerLink="/view-details/{{ movie.id }}" routerLinkActive="active">
-        <mat-grid-tile *ngIf="movie?.genres?.indexOf(Genre) !== -1" >
-          <img src="{{movie.poster}}" alt="poster">
-        </mat-grid-tile>
-      </div>
-    </mat-grid-list>
+    <div #gridList id="gridList">
+      <mat-grid-list cols="{{columnNum}}" rowHeight="140px">
+        <div *ngFor="let movie of movieList"
+          routerLink="/view-details/{{ movie.id }}"
+          routerLinkActive="active"
+        >
+          <mat-grid-tile *ngIf="movie?.genres?.indexOf(Genre) !== -1">
+            <img src="{{movie.poster}}" alt="poster">
+          </mat-grid-tile>
+        </div>
+      </mat-grid-list>
+    </div>
   </div>
 </div>

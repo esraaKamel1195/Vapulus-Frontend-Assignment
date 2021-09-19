@@ -1,3 +1,14 @@
 .container {
   display: inline-flex;
+  margin: 30px;
+  .first-side {
+    padding-right: 25px;
+  }
+  .second-side {
+    h3 {
+      p {
+        display: inline;
+      }
+    }
+  }
 }

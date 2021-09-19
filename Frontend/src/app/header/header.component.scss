@@ -63,3 +63,9 @@ hr {
   border: none;
   border-bottom: solid;
 }
+
+@media (min-width: 250px) and (max-width: 480px) {
+  .second-part {
+    display: block;
+  }
+}
