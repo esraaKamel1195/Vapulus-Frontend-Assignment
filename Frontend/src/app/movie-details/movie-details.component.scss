@@ -12,3 +12,15 @@
     }
   }
 }
+
+@media ( min-width: 481px ) and ( max-width: 767px ) {
+  .container {
+    display: block;
+  }
+}
+
+@media ( min-width: 250px ) and ( max-width: 480px ) {
+  .container {
+    display: block;
+  }
+}

@@ -40,17 +40,22 @@ mat-toolbar {
     display: inline-flex;
     direction: rtl;
     margin-top: 30px;
-    margin-right: 30px;
     mat-icon {
       font-size: 45px;
       height: 30px;
       width: 30px;
       transform: scaleX(-1);
     }
-    mat-form-field {
-      height: 33px;
-      width: 250px;
-      border: solid 2px #000000;
+    form  {
+      margin-right: 30px;
+      mat-form-field {
+        height: 33px;
+        width: 250px;
+        border: solid 2px #000000;
+      }
+      ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        height: 33px;
+      }
     }
   }
 }
@@ -64,8 +69,40 @@ hr {
   border-bottom: solid;
 }
 
+@media screen and ( min-width: 481px ) and ( max-width: 767px ) {
+  .second-part {
+    display: block;
+    .left-side, .right-side {
+      width: 100%;
+    }
+    .right-side {
+      margin-top: 0px;
+      form {
+        width: 85%;
+        margin-right: 30px;
+        mat-form-field {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 250px) and (max-width: 480px) {
   .second-part {
     display: block;
+    .left-side, .right-side {
+      width: 100%;
+    }
+    .right-side {
+      margin-top: 0px;
+      form {
+        width: 77%;
+        margin-right: 30px;
+        mat-form-field {
+          width: 100%;
+        }
+      }
+    }
   }
 }
